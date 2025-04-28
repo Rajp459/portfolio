@@ -371,10 +371,8 @@ class ProjectSection extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(left: 20, right: 20, bottom: 50, top: 0),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "Project",
             style: GoogleFonts.robotoMono(
                 fontSize: 30, fontWeight: FontWeight.bold),
           ),
@@ -472,7 +470,6 @@ class Certifications extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(left: 20, right: 20, bottom: 50, top: 0),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             "Certifications",
@@ -553,10 +550,6 @@ class CertificateContainer extends StatelessWidget {
 class ContactSection extends StatelessWidget {
   const ContactSection({super.key, contactLogoImage});
 
-  static List<String> contactLogoImage = [
-    'assets/contactLogo/linkedinlogo.png',
-    'assets/contactLogo/githublogom.png',
-    'assets/contactLogo/instagramlogo.png',
   ];
 
   @override
@@ -571,7 +564,6 @@ class ContactSection extends StatelessWidget {
           Expanded(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
                   // Ensures consistent alignment
@@ -590,12 +582,9 @@ class ContactSection extends StatelessWidget {
                       fontSize: 20, fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(height: 30), // Fix unwanted extra space
-                Row(
                   crossAxisAlignment:
-                      CrossAxisAlignment.start, // Aligns columns properly
                   children: [
                     Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         const SizedBox(
                           height: 5,
@@ -605,7 +594,6 @@ class ContactSection extends StatelessWidget {
                           style: TextStyle(fontWeight: FontWeight.bold),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(top: 5.0),
                           child: GestureDetector(
                             onTap: () async {
                               final Uri emailUri = Uri(
@@ -628,84 +616,18 @@ class ContactSection extends StatelessWidget {
                         )
                       ],
                     ),
-                    const SizedBox(width: 40), // Adds spacing between columns
                     Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         const Text(
                           'SOCIAL MEDIA',
                           style: TextStyle(fontWeight: FontWeight.bold),
                         ),
-                        Wrap(
-                          children: contactLogoImage
-                              .map((image) => ContactLogo(logoPath: image))
-                              .toList(),
-                        )
+                        Padding(
+                                },
+                          ),
                       ],
-                    )
-                  ],
-                )
               ],
             ),
-          ),
-          const SizedBox(width: 20), // Space between columns
-
-          /// **Right Column (Contact Form)**
-          Expanded(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start, // Aligns properly
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  "CONTACT FORM",
-                  style:
-                      GoogleFonts.robotoMono(fontSize: 20, color: Colors.white),
-                ),
-                const SizedBox(height: 10),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Form(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Text('Name'),
-                        const TextField(
-                          decoration: InputDecoration(
-                            border: OutlineInputBorder(),
-                            hintText: 'Enter your name',
-                          ),
-                        ),
-                        const SizedBox(height: 10),
-                        const Text('Email'),
-                        const TextField(
-                          decoration: InputDecoration(
-                            border: OutlineInputBorder(),
-                            hintText: 'Enter your email',
-                          ),
-                        ),
-                        const SizedBox(height: 10),
-                        const Text('Message'),
-                        const TextField(
-                          maxLines: 3,
-                          decoration: InputDecoration(
-                            border: OutlineInputBorder(),
-                            hintText: 'Enter your message',
-                          ),
-                        ),
-                        const SizedBox(height: 20),
-                        ElevatedButton(
-                          onPressed: () {
-                            print("Form Submitted");
-                          },
-                          child: const Text('Send'),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
         ],
       ),
     );
