@@ -373,6 +373,7 @@ class ProjectSection extends StatelessWidget {
       child: Column(
         children: [
           Text(
+            "Projects",
             style: GoogleFonts.robotoMono(
                 fontSize: 30, fontWeight: FontWeight.bold),
           ),
@@ -550,8 +551,6 @@ class CertificateContainer extends StatelessWidget {
 class ContactSection extends StatelessWidget {
   const ContactSection({super.key, contactLogoImage});
 
-  ];
-
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -581,8 +580,9 @@ class ContactSection extends StatelessWidget {
                   style: GoogleFonts.robotoMono(
                       fontSize: 20, fontWeight: FontWeight.bold),
                 ),
-                const SizedBox(height: 30), // Fix unwanted extra space
-                  crossAxisAlignment:
+                const SizedBox(height: 30),// Fix unwanted extra space
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Column(
                       children: [
@@ -594,6 +594,7 @@ class ContactSection extends StatelessWidget {
                           style: TextStyle(fontWeight: FontWeight.bold),
                         ),
                         Padding(
+                          padding: EdgeInsets.zero,
                           child: GestureDetector(
                             onTap: () async {
                               final Uri emailUri = Uri(
@@ -616,21 +617,21 @@ class ContactSection extends StatelessWidget {
                         )
                       ],
                     ),
-                    Column(
+                    const Column(
                       children: [
-                        const Text(
+                        Text(
                           'SOCIAL MEDIA',
                           style: TextStyle(fontWeight: FontWeight.bold),
                         ),
-                        Padding(
-                                },
-                          ),
                       ],
-              ],
+                    ),
+            ],
             ),
         ],
       ),
-    );
+    )
+    ]
+    ));
   }
 }
 
