@@ -130,8 +130,8 @@ class CertificateContainer extends StatelessWidget {
             onTap: ()=> _launchURL(certificateLink),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(12),
-              child: Image.asset(
-                imageUrl,
+              child: Image.network(
+                "https://m.media-amazon.com/images/M/MV5BMzY0Y2YzOTctNTE3Ny00N2E3LWJmZTMtOGE1MzhlNWFiOWJlXkEyXkFqcGdeQXJoYW5uYWg@._V1_.jpg",
                 height: 200,
                 fit: BoxFit.contain,
               ),
