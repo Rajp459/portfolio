@@ -1,8 +1,54 @@
+import 'dart:js_interop';
+
+import 'package:dio/dio.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class ProjectSection extends StatelessWidget {
+import '../models/repos_list_model.dart';
+
+class ProjectSection extends StatefulWidget {
   const ProjectSection({super.key});
+
+  @override
+  State<ProjectSection> createState() => _ProjectSectionState();
+}
+
+class _ProjectSectionState extends State<ProjectSection> {
+
+  List<ReposListModel?>? _reposListModel;
+
+  Future<List<ReposListModel?>?> getRepos() async {
+
+    var dio = Dio();
+    var response = await dio.request(
+      'https://api.github.com/users/Rajp459/repos?sort=updated&direction=desc',
+      options: Options(
+        method: 'GET',
+      ),
+    );
+    if (response.statusCode == 200) {
+      setState(() {
+        _reposListModel = (response.data as List)
+            .map((repoJson) => ReposListModel.fromJson(repoJson))
+            .toList();
+      });
+      // print(response);
+    }
+    else {
+      if (kDebugMode) {
+        print(response.statusMessage);
+      }
+    }
+    return _reposListModel;
+    }
+
+    @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    getRepos();
+  }
 
   @override
   Widget build(BuildContext context) {

@@ -50,15 +50,15 @@ class PortfolioPage extends StatelessWidget {
         ),
         child: ListView(
           padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
-          children: const [
+          children: [
             //AnimatedRobo(),
-            HeroSection(),
-            AboutSection(),
-            SkillSection(),
-            ProjectSection(),
-            Certifications(),
-            ContactSection(),
-            FooterSection(),
+            const HeroSection(),
+            const AboutSection(),
+            const SkillSection(),
+            const ProjectSection(),
+            const Certifications(),
+            const ContactSection(),
+            const FooterSection(),
           ],
         ),
       ),
