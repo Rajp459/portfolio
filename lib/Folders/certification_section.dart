@@ -131,7 +131,7 @@ class CertificateContainer extends StatelessWidget {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(12),
               child: Image.network(
-                "https://m.media-amazon.com/images/M/MV5BMzY0Y2YzOTctNTE3Ny00N2E3LWJmZTMtOGE1MzhlNWFiOWJlXkEyXkFqcGdeQXJoYW5uYWg@._V1_.jpg",
+                "https://i.ytimg.com/vi/W34PPGmSkOE/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDTkfOQHKxpw9rRM02SJXvOsak0rA",
                 height: 200,
                 fit: BoxFit.contain,
               ),
