@@ -69,7 +69,7 @@ class Certifications extends StatelessWidget {
               CertificateContainer(
                   title: 'Programming With JavaScript', description: 'Authorized by meta and offered through Coursera',
                 certificateLink: 'https://www.coursera.org/account/accomplishments/verify/GFTKRSE9PSXS',
-                imageUrl: 'assets/images/javaScript.png',
+                imageUrl: 'assets/logo/javaScript.png',
               ),
             ],
           ),
@@ -130,8 +130,8 @@ class CertificateContainer extends StatelessWidget {
             onTap: ()=> _launchURL(certificateLink),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(12),
-              child: Image.network(
-                "https://i.ytimg.com/vi/W34PPGmSkOE/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDTkfOQHKxpw9rRM02SJXvOsak0rA",
+              child: Image.asset(
+                imageUrl,
                 height: 200,
                 fit: BoxFit.contain,
               ),
