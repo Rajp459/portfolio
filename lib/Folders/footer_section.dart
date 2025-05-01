@@ -13,16 +13,22 @@ class FooterSection extends StatelessWidget {
         Column(
           children: [
             Center(
-              child: Text(
-                '🚀 Currently Available for Freelance Work',
-                style: GoogleFonts.poppins(fontSize: 16),
+              child: Center(
+                child: Text(
+                  '🚀 Currently Available for Freelance Work',
+                  textAlign: TextAlign.center,
+                  style: GoogleFonts.poppins(fontSize: 16),
+                ),
               ),
             ),
-            const Row(
+            const Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Text('© 2025 All rights reserved.'),
-                Text('Built with ❤️ using Flutter')
+                SizedBox(height: 5,),
+                Text('© 2025 All rights reserved.', textAlign: TextAlign.center,),
+                SizedBox(height: 5,),
+                Text('Built with ❤️ using Flutter', textAlign: TextAlign.center,)
               ],
             )
           ],

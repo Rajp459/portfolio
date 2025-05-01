@@ -38,6 +38,7 @@ class ContactSection extends StatelessWidget {
                           top: 0), // Adjust spacing if needed
                       child: Text(
                         "DO YOU HAVE A PROJECT TO DISCUSS",
+                        textAlign: TextAlign.center,
                         style: GoogleFonts.robotoMono(
                             fontSize: 20, fontWeight: FontWeight.bold),
                       ),
@@ -45,18 +46,16 @@ class ContactSection extends StatelessWidget {
                     const SizedBox(height: 5), // Adjust spacing
                     Text(
                       "GET IN TOUCH ✉️",
+                      textAlign: TextAlign.center,
                       style: GoogleFonts.robotoMono(
                           fontSize: 15, fontWeight: FontWeight.bold),
                     ),
-                    const SizedBox(height: 30), // Fix unwanted extra space
+                    const SizedBox(height: 10), // Fix unwanted extra space
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Column(
                           children: [
-                            const SizedBox(
-                              height: 5,
-                            ),
                             const Text(
                               'CONTACT',
                               style: TextStyle(fontWeight: FontWeight.bold),
@@ -77,6 +76,7 @@ class ContactSection extends StatelessWidget {
                                 },
                                 child: const Text(
                                   'prajapatiraj459@gmail.com',
+                                  textAlign: TextAlign.center,
                                   style: TextStyle(
                                     color: Colors.blue,
                                   ),
