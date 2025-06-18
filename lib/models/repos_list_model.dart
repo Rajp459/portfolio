@@ -261,7 +261,7 @@ class ReposListModel {
     "private": private,
     "owner": owner.toJson(),
     "html_url": htmlUrl,
-    "description": description,
+    "description": description?.trim(),
     "fork": fork,
     "url": url,
     "forks_url": forksUrl,
