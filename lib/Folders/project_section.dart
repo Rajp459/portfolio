@@ -126,7 +126,11 @@ class ProjectTile extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 8),
-            Text(description, style: GoogleFonts.poppins()),
+            Text(
+                description, style: GoogleFonts.poppins(),
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
+            ),
             const Spacer(),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
